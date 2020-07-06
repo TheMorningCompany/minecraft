@@ -5,40 +5,44 @@
           user-select: none;
 }
 
-#title img {
+img {
   position: absolute;
+}
+
+#title img {
   top: 50%;
-  -webkit-transform: translate(0, -50%) scale(50%);
-          transform: translate(0, -50%) scale(50%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
 }
 
 #desc img {
   position: absolute;
   top: 150%;
-  -webkit-transform: translate(0, -50%) scale(75%);
-          transform: translate(0, -50%) scale(75%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 75%;
 }
 
 .pack {
   height: 100%;
+  width: 100%;
 }
 
 .pack img {
-  position: absolute;
-  display: inline;
-}
-
-.pack img:nth-child(1) {
-  -webkit-transform: translate(-20%, -50%) scale(35%);
-          transform: translate(-20%, -50%) scale(35%);
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  width: 35%;
 }
 
 .pack a img {
-  position: absolute;
   left: 50%;
-  display: inline;
-  -webkit-transform: translate(20%, -50%) scale(15%);
-          transform: translate(20%, -50%) scale(15%);
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  width: 15%;
 }
 
 #footer {

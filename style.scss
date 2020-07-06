@@ -2,11 +2,16 @@
 	user-select: none;
 }
 
+img {
+	position: absolute;
+}
+
 #title {
 	img {
-		position: absolute;
 		top: 50%;
-		transform: translate(0, -50%) scale(50%);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 50%;
 	}
 }
 
@@ -14,26 +19,25 @@
 	img {
 		position: absolute;
 		top: 150%;
-		transform: translate(0, -50%) scale(75%);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 75%;
 	}
 }
 
 .pack {
 	height: 100%;
+	width: 100%;
 	img {
-		position: absolute;
-		display: inline;
-
-		&:nth-child(1) {
-			transform: translate(-20%, -50%) scale(35%);
-		}
+		left: 50%;
+		transform: translate(-100%, -50%);
+		width: 35%;
 	}
 	a {
 		img {
-			position: absolute;
 			left: 50%;
-			display: inline;
-			transform: translate(20%, -50%) scale(15%);
+			transform: translate(100%, -50%);
+			width: 15%;
 		}
 	}
 }
