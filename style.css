@@ -40,8 +40,8 @@ img {
 
 .pack a img {
   left: 50%;
-  -webkit-transform: translate(25%, -50%);
-          transform: translate(25%, -50%);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   width: 25%;
 }
 
@@ -70,7 +70,12 @@ img {
     body {
         background-color: #0D0D0D;
     }
-
+    img {
+	filter: invert(100%);
+    }
+    .pack a img {
+	filter: hue-rotate(360deg);
+	}
 }
 
 /*# sourceMappingURL=style.css.map */
