@@ -1,79 +1,69 @@
 * {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-   font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, Roboto,"Segoe UI", sans-serif;
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, Roboto,"Segoe UI", sans-serif;
+}
+::selection {
+    background: #3EDD51;
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #F2F2F7;
 }
 img {
-  position: absolute;
+    position: absolute;
+    max-width: 100% !important;
 }
 
+h2 {
+    text-align: center;
+    font-size: 36px;
+    padding: 24px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
 
 #title img {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 100% !important;
+    min-width: 300px;
 }
 
-#desc img {
-  position: absolute;
-  top: 150%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 75%;
-}
-
-
-.pack img {
-  left: 50%;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
-  width: 35%;
-}
-
-.pack a img {
-  left: 60%;
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
-  width: 15%;
-  border-radius: 20px;
-  transition: filter 0.4s;
-  
+#title {
+    height: 99vh;
+    width: 100vw;
+    max-width: 100% !important;
 }
 
 #footer {
-  top: 500%;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 44px;
+    justify-content:center;
 }
 
-#footer .logo {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  width: 15vw;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-#footer a img {
-  position: absolute;
-  top: 70%;
+#footer img {
+    min-width: 44px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    justify-content:center;
 }
 
 #copyrightnote {
     font-size: 12px;
     display: flex;
-      justify-content: center;
+    justify-content: center;
     height: 75px;
     width: 80%;
     text-align: center;
@@ -85,25 +75,118 @@ img {
     left: 50%;
     transform: translate(-50%, 25%);
     opacity: 25%;
+    max-width: 100% !important;
 }
 
-.pack a img:hover {
-    filter: brightness(80%);
+.packCard {
+    width: 310px;
+    height: 336px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 32px;
+    box-shadow: none;
+    border: solid rgba(0,0,43,0.0);
+    transform: none;
+    transition: box-shadow 0.4s, border 0.4s, transform 0.4s;
 }
-.pack a img:active {
-    filter: brightness(70%);
+#packCardImg {
+    width: 281px;
+    height: 190px;
+    margin-top: 15px;
+    border-radius: 18px;
+    object-fit: cover;
 }
+#packBtn {
+    underline: none;
+    background-color: #F2F2F7;
+    min-width: 280px;
+    max-width: 372px;
+    height: 52px;
+    padding-top: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 18px;
+    color: black;
+    transition: background-color 0.4s;
+}
+
+#textAndBtn {
+    margin-top: 195px;
+}
+
+.packCard:hover {
+    box-shadow: 0px 15px 40px rgba(7,7,44,0.08);
+    border: solid rgba(0,0,43,0.04);
+    transform: translate(0px,-6px);
+}
+#packBtn:hover {
+    background-color: #e1e1e8;
+}
+#packBtn:active {
+    background-color: #c9c9d3;
+}
+
+
+#packs {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    gap: 36px;
+    justify-content:center;
+}
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
 
 @media(prefers-color-scheme: dark) {
     body {
-        background-color: #0D0D0D;
+        background-color: #232024;
     }
-    img {
-	filter: invert(100%);
+    #footer img {
+        filter: invert(100%);
     }
-    .pack a img {
-	filter: hue-rotate(360deg);
-	}
+    
+    .packCard {
+        background-color: #333033;
+    }
+    
+    #packBtn {
+        background-color: #232024;
+        color: white;
+    }
+    
+    
+    #title img {
+        content: url("img/title/minecraft dark.svg")
+    }
+    
+    #packBtn:hover {
+        background-color: #363138;
+    }
+    #packBtn:active {
+        background-color: #474149;
+    }
+
+    
+    h1 {
+        color: white;
+    }
+    h2 {
+        color: white;
+    }
+    h3 {
+        color: white;
+    }
+    h4 {
+        color: white;
+    }
     #copyrightnote {
         color: #FFFFFF;
     }
