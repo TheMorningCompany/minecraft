@@ -1,6 +1,9 @@
 * {
     font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, Roboto,"Segoe UI", sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 ::selection {
     background: #3EDD51;
 }
@@ -40,9 +43,23 @@ h4 {
 }
 
 #title {
-    height: 99vh;
+    height: 90vh;
     width: 100vw;
     max-width: 100% !important;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+#scrollBtn {
+    margin-bottom: 164px;
+}
+
+#scrollBtnImg {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #footer {
@@ -173,7 +190,9 @@ a:active { text-decoration: none; }
     #packBtn:active {
         background-color: #474149;
     }
-
+    #scrollBtnImg {
+        filter: invert(100%)
+    }
     
     h1 {
         color: white;
