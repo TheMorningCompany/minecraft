@@ -15,16 +15,21 @@
     margin: 0;
 }
 
+h4 {
+    font-weight: 500
+}
+
 body {
     background: var(--light-background);
 }
+
 
 #packBtn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--light-background);
+    background-color: white;
     min-width: 280px;
     max-width: 372px;
     height: 52px;
@@ -49,6 +54,7 @@ body {
     position: relative;
     left: 25px;
     top: 15px;
+    width: 90%;
 }
 
 #packName {
@@ -60,7 +66,7 @@ body {
 #back {
     color: black;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     position: relative;
 }
 
