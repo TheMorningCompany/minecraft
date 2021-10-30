@@ -1,0 +1,104 @@
+:root {
+    --light-background: #F2F2F7;
+    --dark-background: #232024;
+    --pack-button-hover: #e1e1e8;
+    --pack-button-active: #c9c9d3;
+    --pack-card-dark: #333033;
+    --pack-button-dark: #232024;
+    --pack-button-hover-dark: #363138;
+    --pack-button-active-dark: #474149;
+}
+
+* {
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, Roboto,"Segoe UI", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: var(--light-background);
+}
+
+#packBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--light-background);
+    min-width: 280px;
+    max-width: 372px;
+    height: 52px;
+    padding-top: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 18px;
+    border: none;
+    color: black;
+    transition: background-color 0.4s;
+}
+
+#packBtn:hover {
+    background-color: var(--pack-button-hover);
+}
+#packBtn:active {
+    background-color: var(--pack-button-active);
+}
+
+
+#topLeft {
+    position: relative;
+    left: 25px;
+    top: 15px;
+}
+
+#packName {
+    position: relative;
+    top: 25px;
+    color: black;
+}
+
+#back {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+#back:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-radius: 2px;
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-background);
+    }
+
+    #back, #packName {
+        color: var(--light-background);
+    }
+
+    #back::before {
+        border-color: var(--light-background);
+    }
+    
+    #packBtn {
+        background-color: var(--pack-card-dark);
+        color: white;
+    }
+    
+    #packBtn:hover {
+        background-color: var(--pack-button-hover-dark);
+    }
+    #packBtn:active {
+        background-color: var(--pack-button-active-dark);
+    }
+}

@@ -1,3 +1,14 @@
+:root {
+    --light-background: #F2F2F7;
+    --dark-background: #232024;
+    --pack-button-hover: #e1e1e8;
+    --pack-button-active: #c9c9d3;
+    --pack-card-dark: #333033;
+    --pack-button-dark: #232024;
+    --pack-button-hover-dark: #363138;
+    --pack-button-active-dark: #474149;
+}
+
 * {
     font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, Roboto,"Segoe UI", sans-serif;
 }
@@ -9,7 +20,7 @@ html {
 }
 
 body {
-    background-color: #F2F2F7;
+    background-color: var(--light-background);
 }
 img {
     position: absolute;
@@ -117,7 +128,7 @@ h4 {
 }
 #packBtn {
     underline: none;
-    background-color: #F2F2F7;
+    background-color: var(--light-background);
     min-width: 280px;
     max-width: 372px;
     height: 52px;
@@ -139,10 +150,10 @@ h4 {
     transform: translate(0px,-6px);
 }
 #packBtn:hover {
-    background-color: #e1e1e8;
+    background-color: var(--pack-button-hover);
 }
 #packBtn:active {
-    background-color: #c9c9d3;
+    background-color: var(--pack-button-active);
 }
 
 
@@ -164,18 +175,18 @@ a:active { text-decoration: none; }
 
 @media(prefers-color-scheme: dark) {
     body {
-        background-color: #232024;
+        background-color: var(--dark-background);
     }
     #footer img {
         filter: invert(100%);
     }
     
     .packCard {
-        background-color: #333033;
+        background-color: var(--pack-card-dark);
     }
     
     #packBtn {
-        background-color: #232024;
+        background-color: var(--pack-button-dark);
         color: white;
     }
     
@@ -185,10 +196,10 @@ a:active { text-decoration: none; }
     }
     
     #packBtn:hover {
-        background-color: #363138;
+        background-color: var(--pack-button-hover-dark);
     }
     #packBtn:active {
-        background-color: #474149;
+        background-color: var(--pack-button-active-dark);
     }
     #scrollBtnImg {
         filter: invert(100%)

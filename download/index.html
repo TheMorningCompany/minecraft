@@ -5,17 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Download</title>
 </head>
 <body>
+    <div id="topLeft">
+        <a id="back" href="/minecraft">all addons</a>
+        <h1 id="packName"></h1>
+    </div>
     <a id="download" href="">
-        <input type="button" value="Download" />
+        <h4 id="packBtn">download addon</h4>
     </a>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const url = params.get("url");
         document.getElementById("download").href = url;
+        if (url) {
+            let packNameElement = document.getElementById('packName');
+            if (url.includes('/')) {
+                let split = url.split('/');
+                packNameElement.innerText = split[split.length - 1];
+            } else {
+                packNameElement.innerText = url;
+            }
+        } else {
+            window.location.href = "/404.html"
+        }
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3153708711357836"
         crossorigin="anonymous"></script>
