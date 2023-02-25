@@ -159,14 +159,16 @@ h4 {
     background-color: var(--pack-button-hover);
 }
 #packBtn:active {
+    transform: scale(0.95);
     background-color: var(--pack-button-active);
 }
 
 #footer img:hover {
-    
     transform: scale(1.1);
-    
-    
+}
+
+#footer img:active {
+    transform: scale(0.95);
 }
 
 #packs {
